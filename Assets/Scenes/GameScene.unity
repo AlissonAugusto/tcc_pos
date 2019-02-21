@@ -315,7 +315,8 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e7fcf66ed8fb2224c85b53be7a65f908, type: 3}
 --- !u!1 &126034935
 GameObject:
@@ -329,7 +330,7 @@ GameObject:
   - component: {fileID: 126034941}
   - component: {fileID: 126034940}
   - component: {fileID: 126034939}
-  - component: {fileID: 126034938}
+  - component: {fileID: 126034942}
   - component: {fileID: 126034937}
   - component: {fileID: 126034936}
   m_Layer: 0
@@ -353,6 +354,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: {fileID: 345517612}
+  blueColor: {fileID: 21300000, guid: b26357a5a457cfb42ab98b0bc0999811, type: 3}
+  redColor: {fileID: 21300000, guid: 4f8af01601803f74d81d15c77df75d95, type: 3}
+  greenColor: {fileID: 21300000, guid: 9e4e8630a83b32443988d7d1204b2304, type: 3}
+  yellowColor: {fileID: 21300000, guid: bb1416ea1b8fa2e41a5c39688ca57521, type: 3}
 --- !u!222 &126034937
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -362,23 +367,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 126034935}
   m_CullTransparentMesh: 0
---- !u!58 &126034938
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4069548711020002827, guid: e7fcf66ed8fb2224c85b53be7a65f908,
-    type: 3}
-  m_PrefabInstance: {fileID: 591842286}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 126034935}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 21.3}
-  serializedVersion: 2
-  m_Radius: 18
 --- !u!50 &126034939
 Rigidbody2D:
   serializedVersion: 4
@@ -471,6 +459,22 @@ RectTransform:
   m_AnchoredPosition: {x: -2, y: -7}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!70 &126034942
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 126034935}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 15}
+  m_Size: {x: 38, y: 50}
+  m_Direction: 0
 --- !u!1 &269758488
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,10 +816,6 @@ MonoBehaviour:
   firstNumberText: {fileID: 269758490}
   resultText: {fileID: 643716529}
   scoreText: {fileID: 548569678}
-  blueColor: {fileID: 0}
-  redColor: {fileID: 0}
-  greenColor: {fileID: 0}
-  yellowColor: {fileID: 0}
   firstNumber: 0
   secondNumber: 0
   result: 0
@@ -1232,7 +1232,28 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4069548711020002827, guid: e7fcf66ed8fb2224c85b53be7a65f908,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 13.308248
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069548711020002827, guid: e7fcf66ed8fb2224c85b53be7a65f908,
+        type: 3}
+      propertyPath: m_Radius
+      value: 21.468115
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069548711020002827, guid: e7fcf66ed8fb2224c85b53be7a65f908,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -4.5236354
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069548711020002827, guid: e7fcf66ed8fb2224c85b53be7a65f908,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e7fcf66ed8fb2224c85b53be7a65f908, type: 3}
 --- !u!1 &602396173
 GameObject:
@@ -1270,6 +1291,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: {fileID: 1788936625}
+  blueColor: {fileID: 21300000, guid: b26357a5a457cfb42ab98b0bc0999811, type: 3}
+  redColor: {fileID: 21300000, guid: 4f8af01601803f74d81d15c77df75d95, type: 3}
+  greenColor: {fileID: 21300000, guid: 9e4e8630a83b32443988d7d1204b2304, type: 3}
+  yellowColor: {fileID: 21300000, guid: bb1416ea1b8fa2e41a5c39688ca57521, type: 3}
 --- !u!222 &602396175
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1279,12 +1304,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602396173}
   m_CullTransparentMesh: 0
---- !u!58 &602396176
-CircleCollider2D:
+--- !u!70 &602396176
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4069548711020002827, guid: e7fcf66ed8fb2224c85b53be7a65f908,
-    type: 3}
-  m_PrefabInstance: {fileID: 916389933}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 602396173}
   m_Enabled: 1
@@ -1293,9 +1317,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 21.3}
-  serializedVersion: 2
-  m_Radius: 18
+  m_Offset: {x: 0, y: 15}
+  m_Size: {x: 38, y: 50}
+  m_Direction: 0
 --- !u!50 &602396177
 Rigidbody2D:
   serializedVersion: 4
@@ -1708,7 +1732,8 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: e7fcf66ed8fb2224c85b53be7a65f908, type: 3}
 --- !u!1 &982684568
 GameObject:
@@ -1825,6 +1850,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: {fileID: 1299108084}
+  blueColor: {fileID: 21300000, guid: b26357a5a457cfb42ab98b0bc0999811, type: 3}
+  redColor: {fileID: 21300000, guid: 4f8af01601803f74d81d15c77df75d95, type: 3}
+  greenColor: {fileID: 21300000, guid: 9e4e8630a83b32443988d7d1204b2304, type: 3}
+  yellowColor: {fileID: 21300000, guid: bb1416ea1b8fa2e41a5c39688ca57521, type: 3}
 --- !u!222 &1031741095
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1834,12 +1863,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031741093}
   m_CullTransparentMesh: 0
---- !u!58 &1031741096
-CircleCollider2D:
+--- !u!70 &1031741096
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4069548711020002827, guid: e7fcf66ed8fb2224c85b53be7a65f908,
-    type: 3}
-  m_PrefabInstance: {fileID: 123292902}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031741093}
   m_Enabled: 1
@@ -1848,9 +1876,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 21.3}
-  serializedVersion: 2
-  m_Radius: 18
+  m_Offset: {x: 0, y: 15}
+  m_Size: {x: 38, y: 50}
+  m_Direction: 0
 --- !u!50 &1031741097
 Rigidbody2D:
   serializedVersion: 4

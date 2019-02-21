@@ -34,6 +34,10 @@ public class answerMovimentController : MonoBehaviour
         {
             velocity = ((float)(Mathf.Log(score + 10) * 17.942) + UnityEngine.Random.Range(8, 13)) / 50;
         }
+        if (transform.position.y < -7)
+        {
+            setBalloonColor();
+        }
         transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, Screen.height), velocity * Time.deltaTime);
     }
 
@@ -51,6 +55,26 @@ public class answerMovimentController : MonoBehaviour
             Handheld.Vibrate();
             gameController.lastAnswerDestroyed = answerValue;
             answerValue = 0;
+        }
+    }
+
+    private void setBalloonColor()
+    {
+        int randomSet = UnityEngine.Random.Range(0, 4);
+        switch (randomSet)
+        {
+            case 0:
+                GetComponent<SpriteRenderer>().sprite = blueColor;
+                break;
+            case 1:
+                GetComponent<SpriteRenderer>().sprite = redColor;
+                break;
+            case 2:
+                GetComponent<SpriteRenderer>().sprite = greenColor;
+                break;
+            case 3:
+                GetComponent<SpriteRenderer>().sprite = yellowColor;
+                break;
         }
     }
 }
