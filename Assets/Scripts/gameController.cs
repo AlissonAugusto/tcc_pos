@@ -20,9 +20,9 @@ public class gameController : MonoBehaviour
     public Text resultText;
     public Text scoreText;
 
-    public int firstNumber;
-    public int secondNumber = 0;
-    public int result;
+    private int firstNumber;
+    private int secondNumber = 0;
+    private int result;
 
     private int rightAnswer;
 
@@ -40,6 +40,7 @@ public class gameController : MonoBehaviour
         {
             lastAnswerDestroyed = 0;
             score += 1;
+            checkIfIsHighscore(score);
             setAnswers();
         }
     }
@@ -67,19 +68,27 @@ public class gameController : MonoBehaviour
         {
             case 1:
                 firstAnswerText.text = secondNumber.ToString();
-                secondAnswerText.text = Random.Range((Random.Range(1, rightAnswer)), (Random.Range(rightAnswer, 10))).ToString();
-                thirdAnswerText.text = Random.Range((Random.Range(1, rightAnswer)), (Random.Range(rightAnswer, 10))).ToString();
+                secondAnswerText.text = Random.Range(1,10).ToString();
+                thirdAnswerText.text = Random.Range(1, 10).ToString();
                 break;
             case 2:
-                firstAnswerText.text = Random.Range((Random.Range(1, rightAnswer)), (Random.Range(rightAnswer, 10))).ToString();
+                firstAnswerText.text = Random.Range(1, 10).ToString();
                 secondAnswerText.text = secondNumber.ToString();
-                thirdAnswerText.text = Random.Range((Random.Range(1, rightAnswer)), (Random.Range(rightAnswer, 10))).ToString();
+                thirdAnswerText.text = Random.Range(1, 10).ToString();
                 break;
             case 3:
-                firstAnswerText.text = Random.Range((Random.Range(1, rightAnswer)), (Random.Range(rightAnswer, 10))).ToString();
-                secondAnswerText.text = Random.Range((Random.Range(1, rightAnswer)), (Random.Range(rightAnswer, 10))).ToString();
+                firstAnswerText.text = Random.Range(1, 10).ToString();
+                secondAnswerText.text = Random.Range(1, 10).ToString();
                 thirdAnswerText.text = secondNumber.ToString();
                 break;
+        }
+    }
+
+    private void checkIfIsHighscore(int score)
+    {
+        if(score > PlayerPrefs.GetInt("highScore", 0))
+        {
+            PlayerPrefs.SetInt("highScore", score);
         }
     }
 }

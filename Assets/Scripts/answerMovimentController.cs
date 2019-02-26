@@ -13,10 +13,10 @@ public class answerMovimentController : MonoBehaviour
     public Sprite greenColor;
     public Sprite yellowColor;
 
-    float velocity;
-    int answerValue;
-    int score;
-    int life;
+    private float velocity;
+    private int answerValue;
+    private int score;
+    private int life;
 
     // Start is called before the first frame update
     void Start()
