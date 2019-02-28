@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class gameController : MonoBehaviour
 {
     public static int lastAnswerDestroyed = 0;
-    public static int score = 0;
+    public static int score = 1;
 
     public GameObject firstAnswer;
     public GameObject secondAnswer;
@@ -29,6 +29,7 @@ public class gameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = 1;
         setAnswers();
     }
 

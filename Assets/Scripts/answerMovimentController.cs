@@ -13,6 +13,8 @@ public class answerMovimentController : MonoBehaviour
     public Sprite greenColor;
     public Sprite yellowColor;
 
+    public GameObject soundObject;
+
     private float velocity;
     private int answerValue;
     private int score;
@@ -22,7 +24,6 @@ public class answerMovimentController : MonoBehaviour
     void Start()
     {
         answerValue = 0;
-        velocity = ((float)(Mathf.Log(10) * 17.942) + UnityEngine.Random.Range(8, 13)) / 50;
     }
 
     // Update is called once per frame
@@ -30,10 +31,7 @@ public class answerMovimentController : MonoBehaviour
     {
         life = Int32.Parse(value.text);
         score = gameController.score;
-        if (score > 0)
-        {
-            velocity = ((float)(Mathf.Log(score + 10) * 17.942) + UnityEngine.Random.Range(8, 13)) / 50;
-        }
+        velocity = ((float)(Mathf.Log(score + 10) * 17.942) + UnityEngine.Random.Range(8, 13)) / 50;
         if (transform.position.y < -7)
         {
             setBalloonColor();
@@ -52,6 +50,7 @@ public class answerMovimentController : MonoBehaviour
         if (life <= 0)
         {
             gameObject.SetActive(false);
+            soundObject.GetComponent<AudioSource>().Play(0);
             Handheld.Vibrate();
             gameController.lastAnswerDestroyed = answerValue;
             answerValue = 0;
